@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Henry Rosvick</title>
+        <title>Hilbert Curve</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
     </head>
     <body>
-		<a href="hilbert_curve">Hilbert Curve</a>
+		<table>
+		<tr><td>Size:</td><td><input id='size' type='value' min='1' value='500'></td></tr>
+		<tr><td>Offset:</td><td><input id='offset' type='value' min='1' value='100'></td></tr>
+		<tr><td>Level:</td><td><input id='level' type='value' min='1' value='3'></td></tr>
+		</table>
+		<button id='draw'>Draw Hilbert Curve</button>
+        <canvas id="a" width="500" height="500">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='script.js'></script>
     </body>
 </html>
