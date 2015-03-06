@@ -52,6 +52,12 @@ $('#Hilbert_Curve').submit(function(e){
 	var color = $('#color').val() || 'black';
 	var direction = $.parseJSON($('#direction').val());
 	
+	if(level>8){
+		level = 8;
+		$('#level').val(8);
+	}
+	
+	
 	// set image options and clear
 	a_canvas.width = size;
 	a_canvas.height = size;
