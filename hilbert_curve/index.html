@@ -3,26 +3,45 @@
     <head>
         <title>Hilbert Curve</title>
         <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='script.js'></script>
     </head>
     <body>
+		<h2>Hilbert's Sexy Curves</h2>
+		<a href="https://github.com/hhrosvick/hhrosvick.github.io/blob/master/hilbert_curve/script.js" target="_blank">View Source</a>
+		<form id='Hilbert_Curve' action='#'>
 		<table>
-		<tr><td>Size:</td><td><input id='size' type='value' min='1' value='500'></td></tr>
-		<tr><td>Offset:</td><td><input id='offset' type='value' min='1' value='100'></td></tr>
-		<tr><td>Level:</td><td><input id='level' type='value' min='1' value='3'></td></tr>
-		<tr><td>Direction:</td><td>
-		<select id='direction'>
+		<tr>
+		<td>Size:</td><td><input id='size' type='value' min='1' value='500'></td>
+		<td>Offset:</td><td><input id='offset' type='value' min='1' value='100'></td>
+		</tr>
+		<tr>
+		<td>Level:</td><td><input id='level' type='value' min='1' value='3'></td>
+		<td>Direction:</td>
+		<td><select id='direction'>
 			<option value='[0,1]'> Up
 			<option value='[0,-1]'> Down
 			<option value='[-1,0]'> Left
 			<option value='[1,0]'> Right
-		</select>
-		</td></tr>
+		</select></td>
+		</tr>
+		<tr><td>Draw Type:</td><td><select id='type'>
+			<option> Lines
+			<option> Pixels
+			<option> Polygon
+		</select></td>
+		<td>Color:</td><td><input id='color' type='text' placeholder='Valid CSS Color'></td>
+		</tr>
+		
+		<td colspan=2><button id='draw' type='submit' value='draw'>Draw Hilbert Curve</button></td>
+		<td colspan=2><button id='reset' type='reset' value='reset'>Reset</button></td>
 		</table>
-		<button id='draw'>Draw Hilbert Curve</button>
+		</form>
+		
+		
         <canvas id="a" width="500" height="500">
             This text is displayed if your browser does not support HTML5 Canvas.
         </canvas>
-        <script type='text/javascript' src='jquery.js'></script>
-        <script type='text/javascript' src='script.js'></script>
+
     </body>
 </html>
