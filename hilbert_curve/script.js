@@ -23,10 +23,12 @@ $('#draw').on('click', function(){
 	// calculate side length
 	var line_length = (size-(offset*2))/(Math.pow(2,level)-1);
 	
+	var start_location = direction[0]>=0 && direction[1]<=0 ? size-offset : offset;
+	
 	// initialize draw location pass-by-reference object.
 	var draw_location = {
-		row: offset,
-		column: offset
+		row: start_location,
+		column: start_location
 	};
 	
 	//console.log(level,size,offset,line_length, draw_location);
