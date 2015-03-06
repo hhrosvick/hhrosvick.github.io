@@ -9,6 +9,16 @@
 		<tr><td>Size:</td><td><input id='size' type='value' min='1' value='500'></td></tr>
 		<tr><td>Offset:</td><td><input id='offset' type='value' min='1' value='100'></td></tr>
 		<tr><td>Level:</td><td><input id='level' type='value' min='1' value='3'></td></tr>
+		<tr><td>Direction:</td><td>
+		<select id='direction'>
+			<option value='[0,1]'> Up
+			<option value='[0,-1]'> Down
+			<option value='[-1,0]'> Left
+			<option value='[1,0]'> Right
+		</select>
+		<input id='level' type='value' min='1' value='3'>
+		
+		</td></tr>
 		</table>
 		<button id='draw'>Draw Hilbert Curve</button>
         <canvas id="a" width="500" height="500">

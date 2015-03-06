@@ -11,6 +11,7 @@ $('#draw').on('click', function(){
 	var level = parseInt($('#level').val());
 	var size = parseInt($('#size').val());
 	var offset = parseInt($('#offset').val());
+	var direction = $.parseJSON($('#direction').val());
 	
 	// set image options and clear
 	a_canvas.width = size;
@@ -31,8 +32,8 @@ $('#draw').on('click', function(){
 	//console.log(level,size,offset,line_length, draw_location);
 	//console.log(line_length);
 	
-	// start recursion
-	hilbert_curve(0,1,level,line_length,draw_location,context);
+	// start recursion with initial values
+	hilbert_curve(direction[0],direction[1],level,line_length,draw_location,context);
 	
 	//console.log(draw_location);
 });
@@ -51,9 +52,9 @@ $('#draw').on('click', function(){
 // ----Mapping-----==---------Sub-curve Order-------- 
 // --------( x, y) -- (-y,-x) ( x, y) ( x, y) ( y, x)
 // Up -----( 0, 1) -- (-1, 0) ( 0, 1) ( 0, 1) ( 1, 0)
+// Down ---( 0,-1) -- ( 1, 0) ( 0,-1) ( 0,-1) (-1, 0)
 // Left ---(-1, 0) -- ( 0, 1) (-1, 0) (-1, 0) ( 0,-1)
 // Right --( 1, 0) -- ( 0,-1) ( 1, 0) ( 1, 0) ( 0, 1)
-// Down ---( 0,-1) -- ( 1, 0) ( 0,-1) ( 0,-1) (-1, 0)
 
 function hilbert_curve(x,y,level,length,draw_loc,cxt){
 	// returns when level is 0
@@ -84,9 +85,9 @@ function hilbert_curve(x,y,level,length,draw_loc,cxt){
 //(same as curve directions)
 // --------( a, b)
 // Up -----( 0, 1)
+// Down ---( 0,-1)
 // Left ---(-1, ~) (b not used)
 // Right --( 1, ~) (b not used)
-// Down ---( 0,-1)
 function draw_line(a,b,length,draw_loc,cxt){
 	
 	// Use when rectangle / line drawing is possible
