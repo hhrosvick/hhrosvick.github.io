@@ -1,0 +1,31 @@
+canvas {
+    border: 1px dotted black;
+	display: block;
+}
+
+tr td:nth-child(odd) {
+	text-align: right;
+}
+
+input {
+	width: 100px;
+}
+
+button {
+	width: 100%;
+}
+
+table {
+	width: 500px;
+}
+
+h2{
+	text-align: center;
+	width: 500px;
+}
+
+a {
+	position: absolute;
+	top: 50px;
+	left: 220px;
+}
