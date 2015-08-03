@@ -8,12 +8,14 @@ table {
 }
 button {
 	width: 500px;
+	height: 50px;
 }
 
 td {
 	border: 1px solid black;
 	text-align: center;
 	min-height: 100px;
+	width: 33%;
 }
 
 #animal_list {
