@@ -8,30 +8,26 @@
   <script type='text/javascript' src='script.js'></script>
 </head>
 <body>
-
+<h2>RANDIMALS</h2>
+<button id='randomize'>MAKE ME A RANDIMAL</button>
 <table>
   <tr>
     <td>
-      <button id='randomize'>MAKE ME A RANDIMAL</button>
+      <span id="left_animal">
+      </span>&nbsp;--&gt;
     </td>
-  </tr>
-  <tr>
     <td>
-      <div id="left_animal">
-
+      <div id="randimal">
       </div>
     </td>
     <td>
-      <div id="randimal"></div>
-    </td>
-    <td>
-      <div id="right_animal">
-
-      </div>
+      &lt;--&nbsp;
+      <span id="right_animal">
+      </span>
     </td>
   </tr>
 </table>
-
+<br><br><br><br>
 <h3>List of Animals to be used:</h3>
 <p>Format:<br><br>
   [Animal Full Name], [Prefix], [Suffix]<br><br>
@@ -39,13 +35,15 @@
   Modify as required.
 </p>
 <textarea id="animal_list">
-  Bear, B, ear
-  Wolf, W, olf
-  Tiger, T, iger
-  Eagle, E, gle
-  Penguin, Pen, guin
-  Muskrat, Musk, rat
-  Zebra, Z, bra
+Bear, B, ear
+Wolf, W, olf
+Tiger, T, iger
+Eagle, E, gle
+Penguin, P, enguin
+Muskrat, M, uskrat
+Zebra, Z, ebra
 </textarea>
+<br>
+<a href='script.js'> Source Code </a>
 </body>
 </html>

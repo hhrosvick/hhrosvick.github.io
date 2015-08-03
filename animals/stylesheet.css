@@ -1,0 +1,22 @@
+h2, h3{
+	text-align: center;
+	width: 500px;
+}
+
+table {
+	width: 500px;
+}
+button {
+	width: 500px;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+	min-height: 100px;
+}
+
+#animal_list {
+	min-width: 500px;
+	min-height: 200px;
+}
