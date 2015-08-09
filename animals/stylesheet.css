@@ -1,14 +1,30 @@
-h2, h3{
+body {
+	background: #1DAFEC;
+	font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif;
+}
+
+#content {
+	width: 700px;
+	margin: 100px auto;
+	background: white;
+	padding: 10px;
+	border: 5px #444444 solid;
+	border-radius: 15px;
+}
+
+h1, h2, h3{
 	text-align: center;
-	width: 500px;
+	width: 100%;
 }
 
 table {
-	width: 500px;
+	width: 100%;
+	margin-top: 20px;
 }
 button {
-	width: 500px;
+	width: 100%;
 	height: 50px;
+	border-radius: 5px;
 }
 
 td {
@@ -18,7 +34,12 @@ td {
 	width: 33%;
 }
 
+#randimal {
+	font-size: 2em;
+}
+
 #animal_list {
-	min-width: 500px;
+	box-sizing: border-box;
+	min-width: 100%;
 	min-height: 200px;
 }
